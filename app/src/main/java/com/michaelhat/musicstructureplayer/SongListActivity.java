@@ -1,7 +1,10 @@
 package com.michaelhat.musicstructureplayer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,6 +25,19 @@ public class SongListActivity extends AppCompatActivity {
         ListView songListView = findViewById(R.id.song_list_view);
 
         songListView.setAdapter(songListAdapter);
+
+        songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Song song = songsList.get(position);
+
+                Intent playAudio = new Intent(getApplicationContext(), MainActivity.class);
+                playAudio.putExtra("songName", song.getSongName());
+                playAudio.putExtra("albumName", song.getAlbumName());
+                playAudio.putExtra("artistName", song.getArtistName());
+                startActivity(playAudio);
+            }
+        });
     }
 
     private void generateSongList() {
