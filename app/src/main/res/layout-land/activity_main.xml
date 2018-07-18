@@ -25,7 +25,7 @@
         android:text="07:52"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="10sp"
+        android:textSize="@dimen/time_text_size"
         app:layout_constraintEnd_toEndOf="@+id/seekBar"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
@@ -58,10 +58,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-thin"
         android:text="@string/artist_1"
         android:textAlignment="textStart"
         android:textColor="@android:color/white"
+        android:textSize="@dimen/alb_art_text_size"
         app:layout_constraintStart_toStartOf="@+id/player_screen_song1"
         app:layout_constraintTop_toBottomOf="@+id/player_screen_song1" />
 
@@ -70,10 +70,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-thin"
         android:text="@string/album_1"
         android:textAlignment="textStart"
         android:textColor="@android:color/white"
+        android:textSize="@dimen/alb_art_text_size"
         app:layout_constraintStart_toStartOf="@+id/player_screen_artist"
         app:layout_constraintTop_toBottomOf="@+id/player_screen_artist" />
 
@@ -132,7 +132,7 @@
         android:text="00:00"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="10sp"
+        android:textSize="@dimen/time_text_size"
         app:layout_constraintStart_toStartOf="@+id/seekBar"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
